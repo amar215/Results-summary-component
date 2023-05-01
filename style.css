@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;700;800&display=swap');
+
+
+/* Where I left off */
+/* could not get box-shadow right. find out a way to solve the problem. 
+    border radius is applied but box shadow shows sharp corner fix this issue. */
+
+    /* Issues faced and what I learned */
+    /* Issue: Box shadow could not get round as border radius. as border radius wa applied to cards and not container. Box shadow was applied to container and border radius to cards. FIXED IT by appliying border radius and box shadow to container  */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Hanken Grotesk';
+    background-color: hsl(0, 0%, 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 30px;
+}
+
+/* One Container 2 two div as children for each card */
+.container {
+    display: flex;
+    margin: 150px;
+    box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 25px;
+}
+
+/* 1st Card (Result Card / 1st Child) */
+.result {
+    background-image: linear-gradient(to bottom, hsl(252, 100%, 67%),hsl(241, 81%, 54%));
+    width: 18rem;
+    height: 23rem;
+    border-radius: 25px;
+    color: #fff;
+    padding: 2rem;
+
+    /* Positioning */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.yourResultHeading {
+    opacity: 0.7;
+}
+
+.circle {
+    background-image: linear-gradient(to bottom, hsla(256, 72%, 46%, 1),hsla(241, 72%, 46%, 0));
+    width: 9rem;
+    height: 9rem;
+    margin: 1rem;
+    border-radius: 50%;
+
+    /* positioning */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.bigNumber {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.smallNumber {
+    opacity: 0.4;
+    font-weight: 500;
+}
+
+.resultPara {
+    text-align: center;
+    opacity: 0.7;
+    margin: 0.5rem;
+}
+
+/* 2st Card (Summary Card / 2st Child)*/
+
+.summary {
+    background-color: hsl(0, 0%, 100%);
+    width: 18rem;
+    height: 23rem;
+    border-radius: 0 25px 25px 0;
+    padding: 2rem;
+
+    /* Positioning */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.summaryHeading {
+    font-weight: 900;
+    color: hsl(224, 30%, 27%);
+}
+
+.subjects {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.subjectName {
+    display: flex;
+}
+
+h4 {
+    margin-left: 10px;
+}
+
+/* Card 2 heading Background Color */
+
+.summary .subjects:nth-child(2) {
+    background-color: hsla(0, 100%, 67%, 0.08);
+}
+
+.summary .subjects:nth-child(3) {
+    background-color: hsla(39, 100%, 56%, 0.08);
+}
+
+.summary .subjects:nth-child(4) {
+    background-color: hsla(166, 100%, 37%, 0.08);
+}
+
+.summary .subjects:nth-child(5) {
+    background-color: hsla(234, 85%, 45%, 0.08);
+}
+
+
+/* Card 2 headings color */
+.headR {
+    color:  hsl(0, 100%, 67%);
+}
+
+.headM {
+    color: hsl(39, 100%, 56%);
+}
+
+.headV {
+    color: hsl(166, 100%, 37%);
+}
+
+.headVi {
+    color: hsl(234, 85%, 45%);
+}
+
+/* Card 2 Button */
+
+.btn {
+    color: #fff;
+    background-color: hsl(224, 30%, 27%);
+    height: 2.2rem;
+    border: 0;
+    border-radius: 1rem;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+
+/* For Mobile version */
+
+@media (max-width: 375px) {
+    .container {
+        display: block;
+    }
+}
